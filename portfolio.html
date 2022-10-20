@@ -12,22 +12,22 @@
 
       <link rel="icon" href="https://content.app-sources.com/s/40770046139585802/uploads/Logo/dekleinewerf-logo-h-960w-6292095.png" />
 
-      <title>De Kleine Werf - Accommodation in Garies - The Main House</title>
+      <title>Portfolio</title>
 
-      <link rel="canonical" href="https://dekleinewerf.co.za/the-main-house" />
-      <meta property="og:url" content="https://dekleinewerf.co.za/the-main-house"/>
-      <meta itemprop="url" content="https://dekleinewerf.co.za/the-main-house"/>
-      <meta name="twitter:url" content="https://dekleinewerf.co.za/the-main-house"/>
-      <meta name="description" content="The three bedroom Main House is ideal for a family or group of friends travelling together." />
+      <link rel="canonical" href="https://dekleinewerf.co.za/portfolio" />
+      <meta property="og:url" content="https://dekleinewerf.co.za/portfolio"/>
+      <meta itemprop="url" content="https://dekleinewerf.co.za/portfolio"/>
+      <meta name="twitter:url" content="https://dekleinewerf.co.za/portfolio"/>
+      <meta name="description" content="" />
       <meta property="og:site_name" content="de-kleine-werf" />
-      <meta property="og:title" content="De Kleine Werf - Accommodation in Garies - The Main House"/>
+      <meta property="og:title" content="Portfolio"/>
       <meta property="og:type" content="website"/>
-      <meta property="og:description" content="The three bedroom Main House is ideal for a family or group of friends travelling together."/>
-      <meta itemprop="name" content="De Kleine Werf - Accommodation in Garies - The Main House"/>
-      <meta itemprop="description" content="The three bedroom Main House is ideal for a family or group of friends travelling together."/>
-      <meta name="twitter:title" content="De Kleine Werf - Accommodation in Garies - The Main House"/>
+      <meta property="og:description" content=""/>
+      <meta itemprop="name" content="Portfolio"/>
+      <meta itemprop="description" content=""/>
+      <meta name="twitter:title" content="Portfolio"/>
       <meta name="twitter:card" content="summary"/>
-      <meta name="twitter:description" content="The three bedroom Main House is ideal for a family or group of friends travelling together."/>
+      <meta name="twitter:description" content=""/>
       <script type="text/javascript">
         var WebPlatform = window.WebPlatform || {};
 
@@ -70,13 +70,66 @@
       <link rel="preload stylesheet" as="style" media="(max-width: 480px)"
             href="https://static.web-repository.com/t/theme16/css/trunk-480.min.css?v=912" id="style-480" class="stylesheet"/>
 
-      <meta property="og:image" content="https://content.app-sources.com/s/40770046139585802/uploads/Logo/slogan3-6287868.png" />
-        <meta itemprop="image" content="https://content.app-sources.com/s/40770046139585802/uploads/Logo/slogan3-6287868.png" />
-        <meta name="twitter:image" content="https://content.app-sources.com/s/40770046139585802/uploads/Logo/slogan3-6287868.png"/>
+      <meta property="og:image" content="https://content.app-sources.com/s/40770046139585802/uploads/Logo/dekleinewerf-logo-h-960w-6292095.png" />
+        <meta itemprop="image" content="https://content.app-sources.com/s/40770046139585802/uploads/Logo/dekleinewerf-logo-h-960w-6292095.png" />
+        <meta name="twitter:image" content="https://content.app-sources.com/s/40770046139585802/uploads/Logo/dekleinewerf-logo-h-960w-6292095.png"/>
       <!--[if lt IE 9]>
       <script type="text/javascript" src="https://static.web-repository.com/scripts/common/html5shiv.min.js"></script>
       <![endif]-->
-      <style type="text/css" id="global-styles">
+      <script type="text/javascript">
+      WebPlatform.onReady(function () {
+        var wrapper = $('.portfolio-list-wrapper');
+        ClientTools.portfolioPopup.setup(wrapper.find('article'));
+        ClientTools.onImagesLoaded(wrapper, function () {
+          var shuffleOptions = {
+            itemSelector: '.portfolio-post-article',
+            sizer: wrapper.find('.portfolio_sizer'),
+            speed: 500,
+            easing: 'ease-out'
+          };
+          wrapper.shuffle(shuffleOptions);
+          var refresh = function (delay) {
+            ClientTools.delay(delay, function () {
+              wrapper.shuffle('update');
+              refresh(1000);
+            });
+          };
+          refresh(600);
+        });
+
+        var refreshScroll = $.debounce(350, function () {
+          $window.scroll();
+        });
+
+        var filter = $('.portfolio-filter');
+        filter.find('a').click(function () {
+          var a = $(this);
+          var li = a.parent();
+          if (li.hasClass('active'))
+            return;
+          filter.find('.active').removeClass('active');
+          li.addClass('active');
+          if (a.data('filter') === 'none')
+            wrapper.shuffle('shuffle', 'all');
+          else {
+            var category = $.trim(a.text());
+            wrapper.shuffle('shuffle', function (elem) {
+              var accept = false;
+              elem.find('.portfolio-item-categories span').each(function (idx, span) {
+                var cat = span.textContent || span.innerText;
+                if ($.trim(cat) === category) {
+                  accept = true;
+                  return false;
+                }
+              });
+              return accept;
+            });
+            ClientTools.delay(150, refreshScroll);
+          }
+        });
+      });
+    </script>
+  <style type="text/css" id="global-styles">
   
 
   :root {
@@ -1627,183 +1680,28 @@ background-color: green !important;
       <div class="content slide">
         <div class="content-wrapper">
       <div class="content">
-        <div 
+
+        <div class="template-portfolio-header">
+          <div 
       
-      id="container-widget-1606384662883"
+      id="container-widget-2062"
       
       data-type="Container"
       class="grid-row
        stretched-mobile stretched-tablet"
       data-delay=""
-      style="padding-bottom:0%;
+      style="
       padding-top: 0%; padding-left: 0;
-      background-color: transparent;
+      background-color: #a3d3d6;
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: auto;
-      
-      background-image: none;">
-      <div class="grid-content ">
-          <div class="grid-column    " 
-                 style="width: 30%;
-                 padding-left:0px;padding-right:0px;
-                 background-image: none;
-                 
-                   background-size: cover;
-                   background-repeat: no-repeat;
-                   background-position: center center;
-                 
-                 top: 0px;
-                 
-                 ">
-
-              <div class="widget-row with-centered-content">
-                  <div class="widget 
-          widgetResponsive buttonWidget col20" id="button-widget-1606382397020"
-         data-type="Button" 
-         data-delay=""
-         data-animation-duration=""
-         data-animation-delay=""
-         data-animation="lazyAnimation-"
-         style="margin-top: 12.1212%; margin-left: 0px;">
-      <div class="main-widget-content">
-        <style type="text/css">
-            #button-widget-1606382397020 .hvr-sweep-to-right:before, 
-            #button-widget-1606382397020 .hvr-fade:hover, #button-widget-1606382397020 .hvr-fade:focus, #button-widget-1606382397020 .hvr-fade:active, 
-            #button-widget-1606382397020 .hvr-rectangle-out:before {
-              background: #333333 !important;
-              border-color: #333333 !important;
-            }
-
-            #button-widget-1606382397020 .hvr-sweep-to-right:hover, #button-widget-1606382397020 .hvr-sweep-to-right:focus, #button-widget-1606382397020 .hvr-sweep-to-right:active, 
-            #button-widget-1606382397020 .hvr-fade:hover, #button-widget-1606382397020 .hvr-fade:focus, #button-widget-1606382397020 .hvr-fade:active, 
-            #button-widget-1606382397020 .hvr-rectangle-out:hover, #button-widget-1606382397020 .hvr-rectangle-out:focus, #button-widget-1606382397020 .hvr-rectangle-out:active,
-            #button-widget-1606382397020 .hvr-sweep-to-right:hover .btn-text-wrapper span {
-              color: #ffffff !important;
-            }
-          </style>
-        <div style="text-align: center;">
-          <a href="/accommodation#the-main-house" 
-             target="_self" class="theme-button hvr-rectangle-out   " 
-             style="font-size: 16px; 
-             color:rgba(0, 0, 0, 1);font-family:'Cabin';background-color: rgba(255, 255, 255, 1);border-color: rgba(0, 0, 0, 1);letter-spacing:0px;border-width: 2px;
-             padding: 10px 20px;
-             width: auto;
-             
-             border-radius: 60px;">
-
-            <div class="col20 flex align-center button-icon-wrapper ">
-                <i class="fa fa-chevron-circle-left"></i>
-              <span class="">
-                    BACK</span>
-                </div>
-            </a>
-        </div>
-      </div>
-    </div>
-  </div>
-              </div><div class="grid-column    " 
-                 style="width: 40%;
-                 padding-left:2%;padding-right:2%;background-color: transparent;
-                 background-image: none;
-                 
-                   background-size: cover;
-                   background-repeat: no-repeat;
-                   background-position: center center;
-                 
-                 top: 0px;
-                 
-                 ">
-
-              <div class="widget-row with-centered-content">
-                  <div class="widget 
-          widgetResponsive textWidget headingWidget col20" id="heading-widget-1606382397024"
-         data-type="HeadingWidget" 
-         data-delay=""
-         data-animation-duration=""
-         data-animation-delay=""
-         data-animation="lazyAnimation-"
-         style="margin-top: 0%; margin-left: 0%;">
-      <div class="text-widget-content"><h1 style="text-align: center; line-height: 1.2;"><span style="font-family: Montserrat; font-size: 32px;">The Main House</span></h1></div>
-    </div>
-  </div>
-              </div><div class="grid-column    " 
-                 style="width: 30%;
-                 padding-left:2%;padding-right:2%;
-                 background-image: none;
-                 
-                   background-size: cover;
-                   background-repeat: no-repeat;
-                   background-position: center center;
-                 
-                 top: 0px;
-                 
-                 ">
-
-              <div class="widget-row with-centered-content">
-                  <div class="widget 
-          widgetResponsive buttonWidget col20" id="button-widget-1606382397019"
-         data-type="Button" 
-         data-delay=""
-         data-animation-duration=""
-         data-animation-delay=""
-         data-animation="lazyAnimation-"
-         style="margin-top: 13.986%; margin-left: 0px;">
-      <div class="main-widget-content">
-        <style type="text/css">
-            #button-widget-1606382397019 .hvr-sweep-to-right:before, 
-            #button-widget-1606382397019 .hvr-fade:hover, #button-widget-1606382397019 .hvr-fade:focus, #button-widget-1606382397019 .hvr-fade:active, 
-            #button-widget-1606382397019 .hvr-rectangle-out:before {
-              background: #333333 !important;
-              border-color: #333333 !important;
-            }
-
-            #button-widget-1606382397019 .hvr-sweep-to-right:hover, #button-widget-1606382397019 .hvr-sweep-to-right:focus, #button-widget-1606382397019 .hvr-sweep-to-right:active, 
-            #button-widget-1606382397019 .hvr-fade:hover, #button-widget-1606382397019 .hvr-fade:focus, #button-widget-1606382397019 .hvr-fade:active, 
-            #button-widget-1606382397019 .hvr-rectangle-out:hover, #button-widget-1606382397019 .hvr-rectangle-out:focus, #button-widget-1606382397019 .hvr-rectangle-out:active,
-            #button-widget-1606382397019 .hvr-sweep-to-right:hover .btn-text-wrapper span {
-              color: #ffffff !important;
-            }
-          </style>
-        <div style="text-align: center;">
-          <a href="" 
-             target="_self" class="theme-button hvr-rectangle-out   " 
-             style="font-size: 16px; 
-             color:rgba(0, 0, 0, 1);font-family:'Cabin';background-color: rgba(255, 255, 255, 1);border-color: rgba(0, 0, 0, 1);letter-spacing:0px;border-width: 2px;
-             padding: 10px 20px;
-             width: 100%;
-             
-             border-radius: 60px;">
-
-            <span class="">
-                    BOOK NOW</span>
-                </a>
-        </div>
-      </div>
-    </div>
-  </div>
-              </div></div>
-      </div>
-  <div 
-      
-      id="container-widget-1610348218608"
-      
-      data-type="Container"
-      class="grid-row
-       stretched-mobile stretched-tablet"
-      data-delay=""
-      style="padding-bottom:0%;
-      padding-top: 0.314589%; padding-left: 0;
-      background-color: transparent;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: auto;
+        background-size: cover;
       
       background-image: none;">
       <div class="grid-content ">
           <div class="grid-column    " 
                  style="width: 100%;
-                 padding-left:0px;padding-right:0px;
+                 
                  background-image: none;
                  
                    background-size: cover;
@@ -1814,356 +1712,191 @@ background-color: green !important;
                  
                  ">
 
-              <div class="widget-row with-centered-content">
+              <div class="widget-row ">
                   <div class="widget 
-          widgetResponsive textWidget col19" id="text-widget-1610348218606"
+          widgetResponsive textWidget col20" id="text-widget-2063"
          data-type="TextWidget" 
          data-delay=""
          data-animation-duration=""
          data-animation-delay=""
          data-animation="lazyAnimation-"
-         style="margin-top: 0.929235%; margin-left: 0%;">
-      <div class="text-widget-content"><p style="text-align: center; line-height: 1.8; color: rgb(106, 106, 106);"><span style="font-size: 22px;">The three bedroom Main House is ideal for a family or group of friends travelling together.</span></p></div>
-    </div>
-  </div>
-              </div></div>
-      </div>
-  <div 
-      
-      id="container-widget-1606382397023"
-      
-      data-type="Container"
-      class="grid-row
-       stretched-mobile stretched-tablet"
-      data-delay=""
-      style="padding-bottom:3%;
-      padding-top: 0%; padding-left: 0;
-      background-color: transparent;
-        background-position: center;
-        background-repeat: repeat;
-        background-size: auto;
-      
-      background-image: none;">
-      <div class="grid-content ">
-          <div class="grid-column    " 
-                 style="width: 100%;
-                 padding-left:0px;padding-right:0px;background-color: transparent;
-                 background-image: none;
-                 
-                   background-size: cover;
-                   background-repeat: no-repeat;
-                   background-position: center center;
-                 
-                 top: 0px;
-                 
-                 ">
-
-              <div class="widget-row with-centered-content">
-                  <div class="widget 
-          widgetResponsive col20" id="separator-widget-1606382397023"
-         data-type="Separator" 
-         data-delay=""
-         data-animation-duration=""
-         data-animation-delay=""
-         data-animation="lazyAnimation-"
-         style="margin-top: 0%; margin-left: 0px;">
-      <div>
-          <div class="hr-title fullwidth-separator" style="text-align: center;"> 
-          <span style="border-color:#3e3e3e;"</span> 
-        </div> 
-      </div>
+         style="margin-top: 5%; margin-left: 0%;">
+      <div class="text-widget-content"><p style="text-align: center; line-height: 1.6;"><span style="font-size: 42px; color: rgb(255, 255, 255); font-family: 'Droid Serif';">My Work</span></p></div>
     </div>
   </div>
               <div class="widget-row ">
                   <div class="widget 
-          widgetResponsive gallery col20" id="gallery-widget-1606382397017"
-         data-type="Gallery" 
-         data-delay=""
-         data-animation-duration=""
-         data-animation-delay=""
-         data-animation="lazyAnimation-"
+          
+         widgetResponsive spacer col20" id="spacer-widget-2064"
+         data-type="Spacer" 
          style="margin-top: 0px; margin-left: 0px;">
-
-      <div class="col20 f-left gallery-widget-content">
-        <div data-rel="lightbox">
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main1-6287933.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main1-6287933.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 0%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main3-6287938.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main3-6287938.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 0%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main17-7094574.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main17-7094574.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 0%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main16-7095388.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main16-7095388.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main18-7095387.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main18-7095387.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main5-6287940.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main5-6287940.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main6-6287943.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main6-6287943.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main7-6287944.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main7-6287944.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main8-6287946.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main8-6287946.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main9-6287947.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main9-6287947.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main10-6287950.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main10-6287950.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main11-6287951.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main11-6287951.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main12-6287952.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main12-6287952.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main13-6287952.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main13-6287952.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main14-6287953.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main14-6287953.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main15-6287955.jpg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main15-6287955.jpg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main21-7123644.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main21-7123644.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main22-7123649.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main22-7123649.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main23-7123651.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main23-7123651.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main24-7123652.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/De-Kleine-Werf-Main24-7123652.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_1-5727940.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_1-5727940.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_2-5727941.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_2-5727941.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_3-5727942.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_3-5727942.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_4-5727943.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoofhuis_4-5727943.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoof_Huis_2021-3-1634088.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoof_Huis_2021-3-1634088.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp " 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoof_Huis_2021-2-1634090.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoof_Huis_2021-2-1634090.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              <div class="widget-gallery-image-item render-crisp image-item-last" 
-                     data-slide="https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoof_Huis_2021-1-1634090.jpeg" style="
-                     height: 0;
-                     width: 32.0%;
-                     padding-top: 18.0%;
-                     background: url('https://content.app-sources.com/s/40770046139585802/uploads/Cottages/Hoof_Huis_2021-1-1634090.jpeg') no-repeat center center;
-                     background-size: cover;
-                     margin-top: 2%;
-                     margin-right: 2%;">
-                </div>
-              </div>
-          </div>
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 5.009107468123862% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
     </div>
   </div>
               </div></div>
       </div>
   </div>
+          <div class="grid-row">
+            <div class="grid-content portfolio-list">
+              <div class="portfolio-filter">
+                <ul>
+                  <li class="active"><a title="All" data-filter="none">All</a></li>
+                  <li><a title="Trips">Trips</a></li>
+                  <li><a title="Sea">Sea</a></li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-content portfolio-list portfolio-layout-type-0">
+            <div class="grid-column" style="width: 100%">
+              <div class="widget-row">
+                <div class="portfolio-list-wrapper col20 portfolio-list-type-3 portfolio-spacing-default">
+                  <article class="portfolio-post-article anim-delayed-item" data-animation="portfolioItemAnimation" data-delay="0.1" data-index="0" data-featured="0">
+                      <span class="none portfolio-item-categories" data-type="categories">
+                        <span>Trips</span>
+                        </span>
+
+                      <div class="image-area">
+                        <!-- image -->
+                            <div class="portfolio-head" style="background-image: url('https://content.app-sources.com/t/theme16/shared/uploads/1451607303100_161.jpg')">
+                                  <img src="https://content.app-sources.com/t/theme16/shared/uploads/1451607303100_161.jpg" alt="" class="portfolio-size-holder" 
+                                       data-image="https://content.app-sources.com/t/theme16/shared/uploads/1451607303100_161.jpg" />
+                                </div>
+                              <span class="image-overlay">
+                            <span class="buttons-wrapper-outer">
+                              <span class="buttons-wrapper-inner">
+                                <a title="Zoom" class="zoom primaryColor-bg2"><i class="fa fa-expand"></i></a>
+                                  <a title="View" class="popup primaryColor-bg2"><i class="fa fa-info"></i></a>
+                                  <a href="/portfolio/item-one" data-type="url" class="view primaryColor-bg2"><i class="fa fa-link"></i></a>
+                                  </span>
+                            </span>
+                          </span>
+                        </div>
+                      <div class="post-summary none">
+                        <header>
+                          <h5 class="post-title" data-type="title">
+                                <a href="/portfolio/item-one" title="Item One">Item One</a>
+                              </h5>
+                            <span class="post-meta"></span>
+                        </header>
+                        <div class="post-description-wrapper">
+                          <span class="post-description" data-type="description"><p style="line-height:1.4;font-size:14px;color:#898989;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></span>
+                        </div>
+                      </div>
+                    </article>
+                  <article class="portfolio-post-article anim-delayed-item" data-animation="portfolioItemAnimation" data-delay="0.1" data-index="1" data-featured="1">
+                      <span class="none portfolio-item-categories" data-type="categories">
+                        <span>Trips</span>
+                        / <span>Sea</span>
+                        </span>
+
+                      <div class="image-area">
+                        <!-- gallery -->
+                            <div class="portfolio-head">
+                              <img src="https://content.app-sources.com/t/theme16/shared/uploads/1451607692532_163.jpg" alt="" class="portfolio-size-holder" />
+                              <div class="inline-gallery">
+                                <div class="inline-gallery-item" 
+                                           style="background-image: url('https://content.app-sources.com/t/theme16/shared/uploads/1451607692532_163.jpg')"
+                                           data-image="https://content.app-sources.com/t/theme16/shared/uploads/1451607692532_163.jpg"></div>
+                                    <div class="inline-gallery-item" 
+                                           style="background-image: url('https://content.app-sources.com/t/theme16/shared/uploads/1451615413186_164.jpg')"
+                                           data-image="https://content.app-sources.com/t/theme16/shared/uploads/1451615413186_164.jpg"></div>
+                                    </div>
+                            </div>
+                          <span class="image-overlay">
+                            <span class="buttons-wrapper-outer">
+                              <span class="buttons-wrapper-inner">
+                                <a title="Zoom" class="zoom primaryColor-bg2"><i class="fa fa-expand"></i></a>
+                                  <a title="View" class="popup primaryColor-bg2"><i class="fa fa-info"></i></a>
+                                  </span>
+                            </span>
+                          </span>
+                        </div>
+                      <div class="post-summary none">
+                        <header>
+                          <h5 class="post-title" data-type="title">Item Two</h5>
+                            <span class="post-meta"></span>
+                        </header>
+                        <div class="post-description-wrapper">
+                          <span class="post-description" data-type="description"><p style="line-height:1.4;font-size:14px;color:#898989;">Description</p></span>
+                        </div>
+                      </div>
+                    </article>
+                  <article class="portfolio-post-article anim-delayed-item" data-animation="portfolioItemAnimation" data-delay="0.1" data-index="2" data-featured="0">
+                      <span class="none portfolio-item-categories" data-type="categories">
+                        <span>Sea</span>
+                        </span>
+
+                      <div class="image-area">
+                        <!-- image -->
+                            <div class="portfolio-head" style="background-image: url('https://content.app-sources.com/t/theme16/shared/uploads/1451615413186_165.jpg')">
+                                  <img src="https://content.app-sources.com/t/theme16/shared/uploads/1451615413186_165.jpg" alt="" class="portfolio-size-holder" 
+                                       data-image="https://content.app-sources.com/t/theme16/shared/uploads/1451615413186_165.jpg" />
+                                </div>
+                              <span class="image-overlay">
+                            <span class="buttons-wrapper-outer">
+                              <span class="buttons-wrapper-inner">
+                                <a title="Zoom" class="zoom primaryColor-bg2"><i class="fa fa-expand"></i></a>
+                                  <a title="View" class="popup primaryColor-bg2"><i class="fa fa-info"></i></a>
+                                  <a href="/portfolio/item-3" data-type="url" class="view primaryColor-bg2"><i class="fa fa-link"></i></a>
+                                  </span>
+                            </span>
+                          </span>
+                        </div>
+                      <div class="post-summary none">
+                        <header>
+                          <h5 class="post-title" data-type="title">
+                                <a href="/portfolio/item-3" title="Item 3">Item 3</a>
+                              </h5>
+                            <span class="post-meta"></span>
+                        </header>
+                        <div class="post-description-wrapper">
+                          <span class="post-description" data-type="description"><p style="line-height:1.4;font-size:14px;color:#898989;">Description</p></span>
+                        </div>
+                      </div>
+                    </article>
+                  <article class="portfolio-post-article anim-delayed-item" data-animation="portfolioItemAnimation" data-delay="0.1" data-index="3" data-featured="0">
+                      <span class="none portfolio-item-categories" data-type="categories">
+                        <span>Trips</span>
+                        </span>
+
+                      <div class="image-area">
+                        <!-- image -->
+                            <div class="portfolio-head" style="background-image: url('https://content.app-sources.com/t/theme16/shared/uploads/1451615919038_166.jpg')">
+                                  <img src="https://content.app-sources.com/t/theme16/shared/uploads/1451615919038_166.jpg" alt="" class="portfolio-size-holder" 
+                                       data-image="https://content.app-sources.com/t/theme16/shared/uploads/1451615919038_166.jpg" />
+                                </div>
+                              <span class="image-overlay">
+                            <span class="buttons-wrapper-outer">
+                              <span class="buttons-wrapper-inner">
+                                <a title="Zoom" class="zoom primaryColor-bg2"><i class="fa fa-expand"></i></a>
+                                  <a title="View" class="popup primaryColor-bg2"><i class="fa fa-info"></i></a>
+                                  </span>
+                            </span>
+                          </span>
+                        </div>
+                      <div class="post-summary ">
+                        <header>
+                          <h5 class="post-title" data-type="title">Me on the beach</h5>
+                            <span class="post-meta"></span>
+                        </header>
+                        <div class="post-description-wrapper">
+                          <span class="post-description" data-type="description"><p style="line-height:1.4;font-size:14px;color:#898989;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></span>
+                        </div>
+                      </div>
+                    </article>
+                  <div class="portfolio_sizer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
   <footer class="page-footer ">
             <div 
       
@@ -2645,7 +2378,8 @@ background-color: green !important;
       </script>
 
       <script type="text/javascript" src="https://static.web-repository.com/scripts/platform.client.min.js?v=912" data-cookieconsent="ignore"></script>
-        <script>
+        <script type="text/javascript" src="https://static.web-repository.com/scripts/shuffle.js?v=912" data-cookieconsent="ignore"></script>
+      <script>
 jQuery(document).ready(function($){
     $("a.not-visible-badge").hide();
 });

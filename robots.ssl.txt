@@ -1,4 +1,0 @@
-# Sitemap is also available on /sitemap.xml
-Sitemap: https://www.dekleinewerf.co.za/sitemap.xml
-User-agent: *
-
